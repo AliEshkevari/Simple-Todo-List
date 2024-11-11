@@ -1,13 +1,164 @@
-* {
+/* Fonts */
+@font-face {
+  font-family: "Chewy";
+  src: url("../Fonts/Chewy-Regular.ttf");
+}
+@font-face {
+  font-family: "Sarala";
+  src: url("../Fonts/Sarala-Regular.ttf");
+}
+
+/* Reset css */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  line-height: 1;
+  font-family: "Chewy";
+  letter-spacing: 0.2rem;
+}
+
+html {
   font-size: 62.5%;
 }
 
+/* ul {
+  list-style-type: none;
+} */
+
+a {
+  text-decoration: none;
+}
+
+a,
+i {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* header */
 .header-container {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: khaki;
+}
+
+.header-container h2 {
+  color: rgb(190, 38, 38);
+}
+
+.header-container p {
+  color: rgb(61, 22, 0);
+}
+
+/* Add todo Form */
+.add-todo-form {
+  display: flex;
+  justify-content: center;
+  gap: 10.5rem;
+  margin-top: 1.5rem;
+  padding: 2rem 0;
+}
+
+.add-todo-form input {
+  padding: 1rem;
+  border: 0.2rem solid rgb(61, 22, 0);
+  outline: none;
+  border-radius: 1.6rem;
+  color: rgb(61, 22, 0);
+  font-size: 18px;
+}
+
+.add-todo-form input::placeholder {
+  color: rgb(61, 22, 0);
+}
+
+.add-todo-btn {
+  padding: 1.2rem 3rem;
+  border: 2px solid transparent;
+  background-color: rgb(190, 38, 38);
+  cursor: pointer;
+  border-radius: 1.6rem;
+  transition: all 0.3s ease;
+  font-size: 1.8rem;
+  color: khaki;
+}
+
+.add-todo-btn:hover {
+  background-color: transparent;
+  border: 0.2rem solid rgb(190, 38, 38);
+  color: rgb(61, 22, 0);
+}
+
+/* Todo list */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: disc;
+  gap: 1.3rem;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+
+.todo {
+  font-size: 1.8rem;
+}
+
+/* Stats */
+.stats-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: khaki;
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.stats-container p {
+  color: rgb(61, 22, 0);
+  letter-spacing: 0.2rem;
 }
