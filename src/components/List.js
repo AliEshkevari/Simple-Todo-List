@@ -1,12 +1,13 @@
 import React from 'react'
+import Todo from './Todo'
 
-export default function List() {
+export default function List({ todos, onToggleTodo, onDeleteTodo }) {
     return (
         <ul className='todo-list'>
-            <li className='todo'>Item 1</li>
-            <li className='todo'>Item 2</li>
-            <li className='todo'>Item 3</li>
-            <li className='todo'>Item 4</li>
+            {todos.map((todo) => (
+                <Todo key={todo.id} todo={todo} onToggleTodo={onToggleTodo} onDeleteTodo={onDeleteTodo} />
+            )
+            )}
         </ul>
     )
 }

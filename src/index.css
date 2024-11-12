@@ -27,10 +27,6 @@ html {
   font-size: 62.5%;
 }
 
-/* ul {
-  list-style-type: none;
-} */
-
 a {
   text-decoration: none;
 }
@@ -133,17 +129,56 @@ p {
 
 /* Todo list */
 .todo-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style-type: disc;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.3rem;
   padding-left: 4rem;
   padding-top: 4rem;
 }
 
 .todo {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: rgb(61, 22, 0);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo input {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(61, 22, 0);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo input:checked {
+  background-color: rgb(61, 22, 0);
+  border-color: khaki;
+}
+
+.todo input:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid khaki;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.delete-todo {
+  padding: 0.5rem 1rem;
+  background-color: rgb(190, 38, 38);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* Stats */
