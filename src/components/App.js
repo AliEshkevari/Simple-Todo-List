@@ -24,6 +24,8 @@ export default function App() {
     )))
   }
 
+  console.log(window.innerWidth)
+
   return (
     <div className='app'>
       <Header />
